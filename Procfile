@@ -1,0 +1,1 @@
+web: gulp build && node build/src/index.js
