@@ -1,0 +1,13 @@
+{
+  "database": {
+    "connectionString": "mongodb+srv://ngocduy799:maimaiyem250912@pizzaorderclouddb-bvcbc.mongodb.net/PizzaOrder?retryWrites=true&w=majority"
+
+  },
+  "server": {
+    "port": 5000,
+    "jwtSecret": "random-secret-password",
+    "jwtExpiration": "10h",
+    "routePrefix": "",
+    "plugins": ["logger", "jwt-auth", "swagger"]
+  }
+}

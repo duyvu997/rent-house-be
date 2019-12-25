@@ -59,3 +59,12 @@ typings/
 
 # next.js build output
 .next
+
+#VSCode
+.vscode
+
+#Ignore build folder
+build
+
+#Ignore typings
+typings
