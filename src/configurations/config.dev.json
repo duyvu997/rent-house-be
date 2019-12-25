@@ -1,6 +1,6 @@
 {
   "database": {
-    "connectionString": "mongodb+srv://ngocduy799:maimaiyem250912@pizzaorderclouddb-bvcbc.mongodb.net/PizzaOrder?retryWrites=true&w=majority"
+    "connectionString": "mongodb+srv://ngocduy799:maimaiyem@pizzaorderclouddb-bvcbc.mongodb.net/rent-house?w=majority"
 
   },
   "server": {
