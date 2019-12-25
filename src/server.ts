@@ -3,8 +3,7 @@ import * as Boom from "boom";
 import { IPlugin } from "./plugins/interfaces";
 import { IServerConfigurations } from "./configurations";
 import * as Logs from "./plugins/logging";
-import * as Tasks from "./api/tasks";
-import * as Users from "./api/users";
+
 import * as Root from "./api/root";
 import { IDatabase } from "./database";
 
@@ -51,8 +50,6 @@ export async function init(
 
     console.log("Register Routes");
     Logs.init(server, configs, database);
-    Tasks.init(server, configs, database);
-    Users.init(server, configs, database);
     Root.init(server, configs, database);
     console.log("Routes registered sucessfully.");
 

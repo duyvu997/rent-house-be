@@ -1,6 +1,5 @@
 import { IPlugin, IPluginOptions } from "../interfaces";
 import * as Hapi from "hapi";
-import { IUser, UserModel } from "../../api/users/user";
 import { IRequest } from "../../interfaces/request";
 
 const register = async (
@@ -16,10 +15,6 @@ const register = async (
       request: IRequest,
       h: Hapi.ResponseToolkit
     ) => {
-      const user = await database.userModel.findById(decoded.id).lean(true);
-      if (!user) {
-        return { isValid: false };
-      }
 
       return { isValid: true };
     };
