@@ -4,6 +4,7 @@ const Mongoose = require("mongoose");
 const logging_1 = require("./plugins/logging/logging");
 const user_1 = require("./api/users/user");
 const task_1 = require("./api/tasks/task");
+const house_1 = require("./api/houses/house");
 function init(config) {
     Mongoose.Promise = Promise;
     Mongoose.connect(process.env.MONGO_URL || config.connectionString);
@@ -17,7 +18,8 @@ function init(config) {
     return {
         loggingModel: logging_1.LoggingModel,
         taskModel: task_1.TaskModel,
-        userModel: user_1.UserModel
+        userModel: user_1.UserModel,
+        houseModel: house_1.HouseModel
     };
 }
 exports.init = init;

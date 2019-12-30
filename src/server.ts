@@ -6,6 +6,7 @@ import * as Logs from "./plugins/logging";
 import * as Tasks from "./api/tasks";
 import * as Users from "./api/users";
 import * as Root from "./api/root";
+import * as Houses from "./api/houses";
 import { IDatabase } from "./database";
 
 export async function init(
@@ -54,6 +55,7 @@ export async function init(
     Root.init(server, configs, database);
     Tasks.init(server, configs, database);
     Users.init(server, configs, database);
+    Houses.init(server, configs, database);
     console.log("Routes registered sucessfully.");
 
     return server;

@@ -3,11 +3,13 @@ import { IDataConfiguration } from "./configurations";
 import { ILogging, LoggingModel } from "./plugins/logging/logging";
 import { IUser, UserModel } from "./api/users/user";
 import { ITask, TaskModel } from "./api/tasks/task";
+import { IHouse, HouseModel } from "./api/houses/house";
 
 export interface IDatabase {
   loggingModel: Mongoose.Model<ILogging>;
   userModel: Mongoose.Model<IUser>;
   taskModel: Mongoose.Model<ITask>;
+  houseModel: Mongoose.Model<IHouse>;
 }
 
 export function init(config: IDataConfiguration): IDatabase {
@@ -27,6 +29,7 @@ export function init(config: IDataConfiguration): IDatabase {
   return {
     loggingModel: LoggingModel,
     taskModel: TaskModel,
-    userModel: UserModel
+    userModel: UserModel,
+    houseModel: HouseModel
   };
 }

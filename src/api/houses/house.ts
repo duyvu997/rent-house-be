@@ -1,6 +1,7 @@
 import * as Mongoose from "mongoose";
 
-export interface ITask extends Mongoose.Document {
+
+export interface IHouse extends Mongoose.Document {
   userId: string;
   name: string;
   description: string;
@@ -9,7 +10,7 @@ export interface ITask extends Mongoose.Document {
   updateAt: Date;
 }
 
-export const TaskSchema = new Mongoose.Schema(
+export const HouseSchema = new Mongoose.Schema(
   {
     userId: { type: String, required: true },
     name: { type: String, required: true },
@@ -21,4 +22,4 @@ export const TaskSchema = new Mongoose.Schema(
   }
 );
 
-export const TaskModel = Mongoose.model<ITask>("Task", TaskSchema);
+export const HouseModel = Mongoose.model<IHouse>("house", HouseSchema);
