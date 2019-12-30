@@ -1,7 +1,8 @@
 import * as Server from "./server";
 import * as Database from "./database";
 import * as Configs from "./configurations";
-
+import * as mongoose from "mongoose";
+mongoose.set("debug", true);
 console.log(`Running environment ${process.env.NODE_ENV || "dev"}`);
 
 // Catch unhandling unexpected exceptions

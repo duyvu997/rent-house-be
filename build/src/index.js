@@ -11,6 +11,8 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const Server = require("./server");
 const Database = require("./database");
 const Configs = require("./configurations");
+const mongoose = require("mongoose");
+mongoose.set("debug", true);
 console.log(`Running environment ${process.env.NODE_ENV || "dev"}`);
 // Catch unhandling unexpected exceptions
 process.on("uncaughtException", (error) => {

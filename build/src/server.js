@@ -12,6 +12,7 @@ const Hapi = require("hapi");
 const Logs = require("./plugins/logging");
 const Tasks = require("./api/tasks");
 const Users = require("./api/users");
+const Root = require("./api/root");
 function init(configs, database) {
     return __awaiter(this, void 0, void 0, function* () {
         try {
@@ -44,6 +45,7 @@ function init(configs, database) {
             console.log("All plugins registered successfully.");
             console.log("Register Routes");
             Logs.init(server, configs, database);
+            Root.init(server, configs, database);
             Tasks.init(server, configs, database);
             Users.init(server, configs, database);
             console.log("Routes registered sucessfully.");
